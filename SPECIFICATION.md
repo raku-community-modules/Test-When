@@ -46,7 +46,7 @@ to be supported by the module are:
 ## Optional Modules
 
 Some distributions can offer extra functionality if the user has an optional
-module installed. The purpose of Test::Is is to allow writing tests testing
+module installed. The purpose of Test::When is to allow writing tests testing
 such optional functionality by detecting availability of such an optional
 module.
 
@@ -63,10 +63,10 @@ the tested environment will be the presence
 ![][spec-none]
 
 The module will not export any functions and all of its functionality
-will be used via the `use Test::Is ...` line, for example:
+will be used via the `use Test::When ...` line, for example:
 
 ```perl6
-    use Test::Is <network extended release>,       # env var settings
+    use Test::When <network extended release>,       # env var settings
                     :modules<Foo::Bar  Ber::Boor>, # optional modules
                     :libs<sqlite3>;                # needed C libs
 ```
@@ -80,7 +80,7 @@ sets of env vars that have to be set in order to run those tests. They
 are to be provided on the `use...` line as positional arguments, like so:
 
 ```perl6
-    use Test::Is <smoke author>;
+    use Test::When <smoke author>;
 ```
 
 * `smoke`—tests to be run when either `AUTOMATED_TESTING` or
@@ -108,7 +108,7 @@ are to be provided on the `use...` line as positional arguments, like so:
 Optional modules are to be specified as a list in `:modules` named argument:
 
 ```perl6
-    use Test::Is :modules<Extra::OptionalFeatures EvenMoar::OptionalFeatures>;
+    use Test::When :modules<Extra::OptionalFeatures EvenMoar::OptionalFeatures>;
 ```
 
 Multiple modules can be specified and the entire test will be skipped if at
@@ -121,7 +121,7 @@ least one module is not installed.
 The needed C libraries are to be specified as a list in `:libs` named argument:
 
 ```perl6
-    use Test::Is :libs<sqlite3  someotherlib>;
+    use Test::When :libs<sqlite3  someotherlib>;
 ```
 
 Multiple libraries can be specified and the entire test will be skipped if at
@@ -136,7 +136,7 @@ least one library is not available.
 
 Results of feedback:
 
-* Change module name from `Test::Is` to `Test::When`
+* Change module name from `Test::When` to `Test::When`
 * OFFLINE_TESTING might be changed to ONLINE_TESTING, there's a poll running
     https://twitter.com/zoffix/status/685108122227113984
 * It's not uncommon to want any of X number of libraries/modules installed
