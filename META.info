@@ -1,20 +1,14 @@
 {
     "perl"         : "6.c",
-    "name"         : "IRC::Client::Plugin::Factoid",
+    "name"         : "Test::When",
     "version"      : "1.001001",
-    "description"  : "plugin providing features of an IRC factoid bot",
-    "depends"      : [
-        "IRC::Client:ver<2.003001>",
-        "Number::Denominate:ver<1.001001>",
-        "WWW::Google::Time:ver<1.001001>",
-        "Lingua::Conjunction:ver<1.001001>",
-        "DBIish:ver<0.1.0>"
-    ],
+    "description"  : "Selectively run tests based on the environment and installed modules and libs",
+    "depends"      : [ "Test" ],
     "test-depends" : [ "Test" ],
     "provides"     : {
-        "IRC::Client::Plugin::Factoid" : "lib/IRC/Client/Plugin/Factoid.pm6"
+        "Test::When" : "lib/Test/When.pm6"
     },
-    "author"       : "Zoffix Znet",
+    "authors"      : [ "Zoffix Znet" ],
     "source-url"   :
-        "git://github.com/zoffixznet/perl6-IRC-Client-Plugin-Factoid.git"
+        "git://github.com/zoffixznet/perl6-Test-When.git"
 }
