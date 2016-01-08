@@ -35,8 +35,8 @@ to be supported by the module are:
 
 * **Extras**
 
-    * `OFFLINE_TESTING`: if true, tests are being run in an environment with a
-    restricted or unavailable network
+    * `ONLINE_TESTING`: unless true, tests must not attempt to access a network
+        resource (such a website or attempt to query a network interface).
 
     * `ALL_TESTING`: if true, all possible tests will be run. That is, this
     module will NOT skip any tests it could possibly skip under other
@@ -98,8 +98,8 @@ are to be provided on the `use...` line as positional arguments, like so:
 * `author`—tests to be run when `AUTHOR_TESTING` or `ALL_TESTING` env var is
     set to true.
 
-* `network`—tests must **NOT** be run when `OFFLINE_TESTING` is set to true,
-    unless `ALL_TESTING` is also set to true.
+* `network`—tests to be run when `ONLINE_TESTING` or `ALL_TESTING` is set to
+    true.
 
 ### Optional Modules
 
@@ -108,29 +108,40 @@ are to be provided on the `use...` line as positional arguments, like so:
 Optional modules are to be specified as a list in `:modules` named argument:
 
 ```perl6
-    use Test::When :modules<Extra::OptionalFeatures EvenMoar::OptionalFeatures>;
+    use Test::When :modules<Extra::OptionalFeatures Moar::OptionalFeatures>;
 ```
 
 Multiple modules can be specified and the entire test will be skipped if at
 least one module is not installed.
 
+To specify particular versions, use pairs:
+
+```perl6
+    use Test::When :modules( 'Extra::OptionalFeatures' => '1.001002'  );
+    use Test::When :modules( 'Extra::OptionalFeatures' => (v6.a .. *) );
+```
+
+You can also use junctions to specify whether, say, you want any of the
+modules installed:
+
+```perl6
+    use Test::When :modules( any <DB::MySQL  DB::SQLite> );
+```
+
+
 ### Prerequisite C Libraries
 
 ![][spec-none]
 
-The needed C libraries are to be specified as a list in `:libs` named argument:
+The needed C libraries are to be specified as a list in `:libs` named argument.
+Features and behaviour are same as [optional modules](#optional-modules).
+Version `v1` is to be assumed by default.
 
 ```perl6
     use Test::When :libs<sqlite3  someotherlib>;
+    use Test::When :libs( sqlite3 => 'v2' );
+    use Test::When :libs( any<sqlite3  someotherlib> );
 ```
-
-Multiple libraries can be specified and the entire test will be skipped if at
-least one library is not available.
-
-[spec-none]: _chromatin/spec-none.png
-[spec-partial]: _chromatin/spec-partial.png
-[spec-full]: _chromatin/spec-full.png
-
 
 ## Feeback
 
@@ -146,3 +157,7 @@ Results of feedback:
 * Use http://modules.perl6.org/repo/LibraryCheck for lib checking
 * https://github.com/jonathanstowe/CheckSocket might also be useful for
 something
+
+[spec-none]: _chromatin/spec-none.png
+[spec-partial]: _chromatin/spec-partial.png
+[spec-full]: _chromatin/spec-full.png
