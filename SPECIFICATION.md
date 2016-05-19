@@ -147,7 +147,7 @@ Version `v1` is to be assumed by default.
 
 Results of feedback:
 
-* Change module name from `Test::When` to `Test::When`
+* Change module name from `Test::Is` to `Test::When`
 * OFFLINE_TESTING might be changed to ONLINE_TESTING, there's a poll running
     https://twitter.com/zoffix/status/685108122227113984
 * It's not uncommon to want any of X number of libraries/modules installed
