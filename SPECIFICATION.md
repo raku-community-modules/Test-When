@@ -60,7 +60,7 @@ the tested environment will be the presence
 
 ## Method of Use
 
-![][spec-none]
+![][spec-partial]
 
 The module will not export any functions and all of its functionality
 will be used via the `use Test::When ...` line, for example:
@@ -73,7 +73,7 @@ will be used via the `use Test::When ...` line, for example:
 
 ### Enviromental variables
 
-![][spec-none]
+![][spec-full]
 
 Keywords to be specified on the `use...` will correspond to the following
 sets of env vars that have to be set in order to run those tests. They
@@ -98,7 +98,7 @@ are to be provided on the `use...` line as positional arguments, like so:
 * `author`—tests to be run when `AUTHOR_TESTING` or `ALL_TESTING` env var is
     set to true.
 
-* `network`—tests to be run when `ONLINE_TESTING` or `ALL_TESTING` is set to
+* `online`—tests to be run when `ONLINE_TESTING` or `ALL_TESTING` is set to
     true.
 
 ### Optional Modules
