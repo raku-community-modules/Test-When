@@ -4,6 +4,25 @@
 
 Test::When - Selectively run tests based on the environment and installed modules and libs
 
+# TABLE OF CONTENTS
+- [NAME](#name)
+- [SYNOPSIS](#synopsis)
+- [UNIMPLEMENTED / SPEC](#unimplemented--spec)
+- [DESCRIPTION](#description)
+- [USAGE](#usage)
+    - [Environmental Variable Controlled Tests](#environmental-variable-controlled-tests)
+        - [`smoke`](#smoke)
+        - [`interactive`](#interactive)
+        - [`extended`](#extended)
+        - [`release`](#release)
+        - [`author`](#author)
+        - [`online`](#online)
+        - [Meaning of the Respected Environmental Variables](#meaning-of-the-respected-environmental-variables)
+- [REPOSITORY](#repository)
+- [BUGS](#bugs)
+- [AUTHOR](#author-1)
+- [LICENSE](#license)
+
 # SYNOPSIS
 
 ```perl6
