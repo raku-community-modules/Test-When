@@ -2,7 +2,7 @@ use lib <lib>;
 use Test;
 
 subtest {
-    my $test = 't/tests/01-env-smoke.t';
+    my $test = 't/tests/01-env-smoke.txt';
     is run-test("perl6 $test"),
         '1..0 # SKIPPING test: To enable smoke tests,'
         ~ " set AUTOMATED_TESTING env var\n",
@@ -18,7 +18,7 @@ subtest {
 }, '<smoke>';
 
 subtest {
-    my $test = 't/tests/02-env-smoke-interactive.t';
+    my $test = 't/tests/02-env-smoke-interactive.txt';
     is run-test("perl6 $test"),
         '1..0 # SKIPPING test: To enable smoke tests,'
         ~ " set AUTOMATED_TESTING env var\n",
@@ -44,7 +44,7 @@ subtest {
 }, '<smoke interactive>';
 
 subtest {
-    my $test = 't/tests/03-env-interactive.t';
+    my $test = 't/tests/03-env-interactive.txt';
     is run-test("NONINTERACTIVE_TESTING=1 perl6 $test"),
         '1..0 # SKIPPING test: To enable interactive tests,'
         ~ " unset NONINTERACTIVE_TESTING env var\n",
@@ -60,7 +60,7 @@ subtest {
 }, '<interactive>';
 
 subtest {
-    my $test = 't/tests/04-env-extended.t';
+    my $test = 't/tests/04-env-extended.txt';
     is run-test("perl6 $test"),
         '1..0 # SKIPPING test: To enable extended tests,'
         ~ " set EXTENDED_TESTING or RELEASE_TESTING env var\n",
@@ -76,7 +76,7 @@ subtest {
 }, '<extended>';
 
 subtest {
-    my $test = 't/tests/05-env-release.t';
+    my $test = 't/tests/05-env-release.txt';
     is run-test("perl6 $test"),
         '1..0 # SKIPPING test: To enable release tests,'
         ~ " set RELEASE_TESTING env var\n",
@@ -92,7 +92,7 @@ subtest {
 }, '<release>';
 
 subtest {
-    my $test = 't/tests/06-env-author.t';
+    my $test = 't/tests/06-env-author.txt';
     is run-test("perl6 $test"),
         '1..0 # SKIPPING test: To enable author tests,'
         ~ " set AUTHOR_TESTING env var\n",
@@ -108,7 +108,7 @@ subtest {
 }, '<author>';
 
 subtest {
-    my $test = 't/tests/07-env-online.t';
+    my $test = 't/tests/07-env-online.txt';
     is run-test("perl6 $test"),
         '1..0 # SKIPPING test: To enable online tests,'
         ~ " set ONLINE_TESTING env var\n",
@@ -124,7 +124,7 @@ subtest {
 }, '<online>';
 
 subtest {
-    my $test = 't/tests/08-env-invalid-keyword.t';
+    my $test = 't/tests/08-env-invalid-keyword.txt';
     is run-test("perl6 $test"),
         " STDERR: ===SORRY!===\nPositional arguments to Test::When can only"
         ~ " be smoke extended interactive release author online\n",
