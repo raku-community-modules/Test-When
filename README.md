@@ -41,10 +41,17 @@ of `Test::When` module.
 ```
 
 The type of test environment to look for is set by positional arguments
-provided on the `use` line. Whether your tests run depends on the set
+provided on the `use` line. Multiple positional arguments can be
+combined. Whether your tests run depends on the set
 environmental variables.
 
+The following positional arguments are supported:
+
 ### `smoke`
+
+```perl6
+    use Test::When <smoke>;
+```
 
 Tests to run when either `AUTOMATED_TESTING` or `ALL_TESTING` env vars are true.
 
