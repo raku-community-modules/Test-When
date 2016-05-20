@@ -57,23 +57,43 @@ Tests to run when either `AUTOMATED_TESTING` or `ALL_TESTING` env vars are true.
 
 ### `interactive`
 
+```perl6
+    use Test::When <interactive>;
+```
+
 Tests must **NOT** be run when `NONINTERACTIVE_TESTING` is set to true,
 unless `ALL_TESTING` is also set to true.
 
 ### `extended`
+
+```perl6
+    use Test::When <extended>;
+```
 
 Tests to be run when either `EXTENDED_TESTING`, `RELEASE_TESTING`,
 or `ALL_TESTING` env var is set to true.
 
 ### `release`
 
+```perl6
+    use Test::When <release>;
+```
+
 Tests to be run when `RELEASE_TESTING` or `ALL_TESTING` env var is set to true.
 
 ### `author`
 
+```perl6
+    use Test::When <author>;
+```
+
 Tests to be run when `AUTHOR_TESTING` or `ALL_TESTING` env var is set to true.
 
 ### `online`
+
+```perl6
+    use Test::When <online>;
+```
 
 Tests to be run when `ONLINE_TESTING` or `ALL_TESTING` env var is set to true.
 
