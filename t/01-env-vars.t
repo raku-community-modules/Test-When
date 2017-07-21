@@ -1,6 +1,9 @@
 use lib <lib>;
 use Test;
 
+plan :skip-all<Tests currently disabled on Windows> if $*DISTRO.is-win;
+plan 8;
+
 subtest {
     my $test = 't/tests/01-env-smoke.txt';
     is run-test("perl6 $test"),
