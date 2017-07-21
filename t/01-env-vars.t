@@ -1,7 +1,6 @@
 use lib <lib>;
 use Test;
 
-plan :skip-all<Tests currently disabled on Windows> if $*DISTRO.is-win;
 plan 8;
 
 subtest {
