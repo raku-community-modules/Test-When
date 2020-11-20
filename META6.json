@@ -11,5 +11,5 @@
     },
     "authors"      : [ "Zoffix Znet" ],
     "source-url"   :
-        "git://github.com/zoffixznet/perl6-Test-When.git"
+        "git://github.com/raku-community-modules/Test-When.git"
 }
