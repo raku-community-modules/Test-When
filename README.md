@@ -25,7 +25,7 @@ Test::When - Selectively run tests based on the environment and installed module
 
 # SYNOPSIS
 
-```perl6
+```raku
     use Test::When <release author>,
         :modules<Extra::Features  More::Options>,
         :libs( 'someClib', any(<sqlite3 mysql pg>) );
@@ -55,7 +55,7 @@ of `Test::When` module.
 
 ## Environmental Variable Controlled Tests
 
-```perl6
+```raku
     use Test::When <author extended>;
 ```
 
@@ -68,7 +68,7 @@ The following positional arguments are supported:
 
 ### `smoke`
 
-```perl6
+```raku
     use Test::When <smoke>;
 ```
 
@@ -76,7 +76,7 @@ Tests to run when either `AUTOMATED_TESTING` or `ALL_TESTING` env vars are true.
 
 ### `interactive`
 
-```perl6
+```raku
     use Test::When <interactive>;
 ```
 
@@ -85,7 +85,7 @@ unless `ALL_TESTING` is also set to true.
 
 ### `extended`
 
-```perl6
+```raku
     use Test::When <extended>;
 ```
 
@@ -94,7 +94,7 @@ or `ALL_TESTING` env var is set to true.
 
 ### `release`
 
-```perl6
+```raku
     use Test::When <release>;
 ```
 
@@ -102,7 +102,7 @@ Tests to be run when `RELEASE_TESTING` or `ALL_TESTING` env var is set to true.
 
 ### `author`
 
-```perl6
+```raku
     use Test::When <author>;
 ```
 
@@ -110,7 +110,7 @@ Tests to be run when `AUTHOR_TESTING` or `ALL_TESTING` env var is set to true.
 
 ### `online`
 
-```perl6
+```raku
     use Test::When <online>;
 ```
 
@@ -139,12 +139,12 @@ or C library to be installed.
 # REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-Test-When
+https://github.com/raku-community-modules/Test-When
 
 # BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-Test-When/issues
+https://github.com/raku-community-modules/Test-When/issues
 
 # AUTHOR
 
