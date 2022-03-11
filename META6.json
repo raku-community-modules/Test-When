@@ -1,15 +1,19 @@
 {
-    "perl"         : "6.c",
-    "name"         : "Test::When",
-    "license"      : "Artistic-2.0",
-    "version"      : "1.001008",
-    "description"  : "Selectively run tests based on the environment and installed modules and libs",
-    "depends"      : [ ],
-    "test-depends" : [ "Test" ],
-    "provides"     : {
-        "Test::When" : "lib/Test/When.pm6"
-    },
-    "authors"      : [ "Zoffix Znet" ],
-    "source-url"   :
-        "git://github.com/raku-community-modules/Test-When.git"
+  "name": "Test::When",
+  "description": "Selectively run tests based on the environment and installed modules and libs",
+  "version": "1.001009",
+  "perl": "6.c",
+  "authors": [
+    "Zoffix Znet"
+  ],
+  "auth": "zef:raku-community-modules",
+  "depends": [],
+  "test-depends": [
+    "Test"
+  ],
+  "provides": {
+    "Test::When": "lib/Test/When.pm6"
+  },
+  "license": "Artistic-2.0",
+  "source-url": "https://github.com/raku-community-modules/Test-When"
 }
