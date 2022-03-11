@@ -1,2 +1,4 @@
-lib/.precomp
+.precomp
 test.p6
+.idea/
+*.iml

@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/zoffixznet/perl6-Test-When.svg)](https://travis-ci.org/zoffixznet/perl6-Test-When)
-
 # NAME
 
 Test::When - Selectively run tests based on the environment and installed modules and libs
