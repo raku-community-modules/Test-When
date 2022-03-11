@@ -1,4 +1,4 @@
-use lib <lib>;
+use lib <lib ../lib>;
 use Test;
 
 plan 8;

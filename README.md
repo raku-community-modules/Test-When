@@ -1,4 +1,4 @@
-# NAME
+# NAME [![Tests on source](https://github.com/raku-community-modules/Test-When/actions/workflows/test.yaml/badge.svg)](https://github.com/raku-community-modules/Test-When/actions/workflows/test.yaml)
 
 Test::When - Selectively run tests based on the environment and installed modules and libs
 
