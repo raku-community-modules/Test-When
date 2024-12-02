@@ -2,5 +2,11 @@ Revision History for Test-When
 
 {{$NEXT}}
 
+1.1  2024-12-02T16:58:55+01:00
+    - Use modern file extensions
+    - Add CI badge for each OS
+    - Some documentation updates to current situation
+    - First version released as a Raku community module
+
 1.001001  2016-05-19
-  - First version released on an unsuspecting world
+    - First version released on an unsuspecting world
