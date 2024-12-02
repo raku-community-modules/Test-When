@@ -12,13 +12,13 @@ the tests, indicating why they're being skipped.
 
 ## Environmental Variables
 
-The Perl 5's ecosystem is currently adhering to the
+The Perl's ecosystem is currently adhering to the
 [environmental variables agreed upon as the Lancaster Consensus](https://github.com/Perl-Toolchain-Gang/toolchain-site/blob/master/lancaster-consensus.md#environment-variables-for-testing-contexts). This module is to implement
 those (thus bringing them into the Perl 6 world), as well as introduce
 a couple of extra ones.
 
 In the list below, `CPAN client` is to mean a module installation tool,
-such as [`panda`](https://github.com/tadzik/panda/). The environmental variables
+such as [`zef`](https://github.com/ugexe/zef/). The environmental variables
 to be supported by the module are:
 
 * **Lancaster Consensus**
@@ -65,7 +65,7 @@ the tested environment will be the presence
 The module will not export any functions and all of its functionality
 will be used via the `use Test::When ...` line, for example:
 
-```perl6
+```raku
     use Test::When <network extended release>,       # env var settings
                     :modules<Foo::Bar  Ber::Boor>, # optional modules
                     :libs<sqlite3>;                # needed C libs
@@ -79,7 +79,7 @@ Keywords to be specified on the `use...` will correspond to the following
 sets of env vars that have to be set in order to run those tests. They
 are to be provided on the `use...` line as positional arguments, like so:
 
-```perl6
+```raku
     use Test::When <smoke author>;
 ```
 
@@ -107,7 +107,7 @@ are to be provided on the `use...` line as positional arguments, like so:
 
 Optional modules are to be specified as a list in `:modules` named argument:
 
-```perl6
+```raku
     use Test::When :modules<Extra::OptionalFeatures Moar::OptionalFeatures>;
 ```
 
@@ -116,7 +116,7 @@ least one module is not installed.
 
 To specify particular versions, use pairs:
 
-```perl6
+```raku
     use Test::When :modules( 'Extra::OptionalFeatures' => '1.001002'  );
     use Test::When :modules( 'Extra::OptionalFeatures' => (v6.a .. *) );
 ```
@@ -124,10 +124,9 @@ To specify particular versions, use pairs:
 You can also use junctions to specify whether, say, you want any of the
 modules installed:
 
-```perl6
+```raku
     use Test::When :modules( any <DB::MySQL  DB::SQLite> );
 ```
-
 
 ### Prerequisite C Libraries
 
@@ -137,25 +136,23 @@ The needed C libraries are to be specified as a list in `:libs` named argument.
 Features and behaviour are same as [optional modules](#optional-modules).
 Version `v1` is to be assumed by default.
 
-```perl6
+```raku
     use Test::When :libs<sqlite3  someotherlib>;
     use Test::When :libs( sqlite3 => 'v2' );
     use Test::When :libs( any<sqlite3  someotherlib> );
 ```
 
-## Feeback
+## Feedback
 
 Results of feedback:
 
 * Change module name from `Test::Is` to `Test::When`
-* OFFLINE_TESTING might be changed to ONLINE_TESTING, there's a poll running
-    https://twitter.com/zoffix/status/685108122227113984
 * It's not uncommon to want any of X number of libraries/modules installed
     We need to support junctions in `:modules`/`:libs, e.g.
     `:lib('sqlite3', any(<foo bar ber>) )`
 
-* Use http://modules.perl6.org/repo/LibraryCheck for lib checking
-* https://github.com/jonathanstowe/CheckSocket might also be useful for
+* Use [LibraryCheck](https://raku.land/zef:jonathanstowe/LibraryCheck) for lib checking
+* [CheckSocket](https://raku.land/zef:jonathanstowe/CheckSocket) might also be useful for
 something
 
 [spec-none]: _chromatin/spec-none.png

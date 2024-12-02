@@ -1,4 +1,3 @@
-use lib <lib ../lib>;
 use Test;
 
 plan 8;
@@ -138,8 +137,6 @@ subtest {
         "with ALL_TESTING";
 }, 'running with invalid keyword for testing';
 
-done-testing;
-
 sub run-test (Str:D $test, *%vars) {
     # set unused env vars to zero, so the tests of this module are not
     # affected by possible env options set for other modules
@@ -161,3 +158,5 @@ sub run-test (Str:D $test, *%vars) {
     return $out unless $err;
     return "$out STDERR: $err";
 }
+
+# vim: expandtab shiftwidth=4

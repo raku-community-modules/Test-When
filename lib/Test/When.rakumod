@@ -39,3 +39,5 @@ sub skip-all (Str $message) {
     say "1..0 # SKIPPING test: $message";
     exit 0;
 }
+
+# vim: expandtab shiftwidth=4
