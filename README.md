@@ -116,7 +116,7 @@ COPYRIGHT AND LICENSE
 
 Copyright 2016 - 2017 Zoffix Znet
 
-Copyright 2020 - 2024 Raku Community
+Copyright 2020 - 2025 Raku Community
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

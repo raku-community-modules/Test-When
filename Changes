@@ -2,6 +2,10 @@ Revision History for Test-When
 
 {{$NEXT}}
 
+2.0  2025-01-16T15:08:51+01:00
+    - Bump version to 2.0 to exceed 1.001009 version
+    - Update copyright year
+
 1.1  2024-12-02T16:58:55+01:00
     - Use modern file extensions
     - Add CI badge for each OS
