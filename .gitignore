@@ -2,3 +2,4 @@
 test.p6
 .idea/
 *.iml
+/Test-When-*

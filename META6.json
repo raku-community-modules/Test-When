@@ -10,16 +10,22 @@
   "description": "Selectively run tests based on the environment and installed modules and libs",
   "license": "Artistic-2.0",
   "name": "Test::When",
-  "perl": "6.c",
   "provides": {
     "Test::When": "lib/Test/When.rakumod"
   },
+  "raku": "6.c",
   "resources": [
   ],
   "source-url": "https://github.com/raku-community-modules/Test-When.git",
+  "support": {
+    "bugtracker": "https://github.com/raku-community-modules/Test-When/issues",
+    "email": "community@raku.org",
+    "source": "https://github.com/raku-community-modules/Test-When.git"
+  },
   "tags": [
+    "TEST"
   ],
   "test-depends": [
   ],
-  "version": "2.0"
+  "version": "2.1"
 }

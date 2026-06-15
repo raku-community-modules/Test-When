@@ -7,11 +7,9 @@ Test::When - Selectively run tests based on the environment and installed module
 =head1 SYNOPSIS
 
 =begin code :lang<raku>
-
 use Test::When <release author>,
   :modules<Extra::Features  More::Options>,
   :libs( 'someClib', any(<sqlite3 mysql pg>) );
-
 =end code
 
 =head1 UNIMPLEMENTED / SPEC
@@ -41,9 +39,7 @@ line of C<Test::When> module.
 =head2 Environmental Variable Controlled Tests
 
 =begin code :lang<raku>
-
 use Test::When <author extended>;
-
 =end code
 
 The type of test environment to look for is set by positional arguments
@@ -56,9 +52,7 @@ The following positional arguments are supported:
 =head3 smoke
 
 =begin code :lang<raku>
-
 use Test::When <smoke>;
-
 =end code
 
 Tests to run when either C<AUTOMATED_TESTING> or C<ALL_TESTING> env
@@ -67,9 +61,7 @@ vars are true.
 =head3 interactive
 
 =begin code :lang<raku>
-
 use Test::When <interactive>;
-
 =end code
 
 Tests must B<NOT> be run when C<NONINTERACTIVE_TESTING> is set to true,
@@ -78,9 +70,7 @@ unless C<ALL_TESTING> is also set to true.
 =head3 extended
 
 =begin code :lang<raku>
-
 use Test::When <extended>;
-
 =end code
 
 Tests to be run when either C<EXTENDED_TESTING>, C<RELEASE_TESTING>,
@@ -89,9 +79,7 @@ or C<ALL_TESTING> env var is set to true.
 =head3 release
 
 =begin code :lang<raku>
-
 use Test::When <release>;
-
 =end code
 
 Tests to be run when C<RELEASE_TESTING> or C<ALL_TESTING> env var is
@@ -100,9 +88,7 @@ set to true.
 =head3 author
 
 =begin code :lang<raku>
-
 use Test::When <author>;
-
 =end code
 
 Tests to be run when C<AUTHOR_TESTING> or C<ALL_TESTING> env var is
@@ -111,9 +97,7 @@ set to true.
 =head3 online
 
 =begin code :lang<raku>
-
 use Test::When <online>;
-
 =end code
 
 Tests to be run when C<ONLINE_TESTING> or C<ALL_TESTING> env var is
@@ -159,7 +143,7 @@ Zoffix Znet
 
 Copyright 2016 - 2017 Zoffix Znet
 
-Copyright 2020 - 2025 Raku Community
+Copyright 2020 - 2026 Raku Community
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
